@@ -6,8 +6,11 @@ TCP_PORT = 5000
 BUFFER_SIZE = 1024
 MESSAGE = "ping"
 
+
 def send(id=0):
+    # Create a TCP/IP socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Connect to server
     s.connect((TCP_IP, TCP_PORT))
     s.send(f"{id}:{MESSAGE}".encode())
     data = s.recv(BUFFER_SIZE)
@@ -20,4 +23,5 @@ def get_client_id():
     return id
 
 
-send(get_client_id())
+if __name__ == "__main__":
+    send(get_client_id())
