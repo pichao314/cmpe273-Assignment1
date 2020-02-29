@@ -1,6 +1,5 @@
 import socket
 
-
 UDP_IP = '127.0.0.1'
 UDP_PORT = 4000
 BUFFER_SIZE = 1024
@@ -21,5 +20,6 @@ def send(id=0):
 def get_client_id():
     id = input("Enter client id:")
     return id
+
 
 send(get_client_id())
