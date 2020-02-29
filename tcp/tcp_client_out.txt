@@ -1,0 +1,1 @@
+2020-02-28 20:24:14,921 - tcp_client.py[line:24] - INFO: received data:pong

@@ -1,0 +1,18 @@
+2020-02-28 20:21:48,332 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 63799)
+2020-02-28 20:21:48,332 - tcp_server.py[line:30] - INFO: received data:1:ping
+2020-02-28 20:21:48,332 - tcp_server.py[line:27] - INFO: No data received.
+2020-02-28 20:23:23,934 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 59391)
+2020-02-28 20:23:23,934 - tcp_server.py[line:30] - INFO: received data:1:ping
+2020-02-28 20:23:23,934 - tcp_server.py[line:27] - INFO: No data received.
+2020-02-28 20:23:33,925 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 60634)
+2020-02-28 20:23:33,926 - tcp_server.py[line:30] - INFO: received data:4:ping
+2020-02-28 20:23:33,926 - tcp_server.py[line:27] - INFO: No data received.
+2020-02-28 20:24:11,131 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 65295)
+2020-02-28 20:24:11,132 - tcp_server.py[line:30] - INFO: received data:5:ping
+2020-02-28 20:24:11,132 - tcp_server.py[line:27] - INFO: No data received.
+2020-02-28 20:24:13,061 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 65532)
+2020-02-28 20:24:13,061 - tcp_server.py[line:30] - INFO: received data:1:ping
+2020-02-28 20:24:13,061 - tcp_server.py[line:27] - INFO: No data received.
+2020-02-28 20:24:14,920 - tcp_server.py[line:21] - INFO: Connection address:('127.0.0.1', 49381)
+2020-02-28 20:24:14,921 - tcp_server.py[line:30] - INFO: received data:7:ping
+2020-02-28 20:24:14,921 - tcp_server.py[line:27] - INFO: No data received.

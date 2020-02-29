@@ -1,9 +1,15 @@
+import logging
 import socket
 
+logging.basicConfig(level=logging.INFO,
+                    filename='tcp_server_out.txt',
+                    filemode='w',
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 TCP_IP = '127.0.0.1'
 TCP_PORT = 5000
 BUFFER_SIZE = 1024
+
 
 def listen_forever():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -12,15 +18,20 @@ def listen_forever():
 
     conn, addr = s.accept()
     print(f'Connection address:{addr}')
+    logging.info(f'Connection address:{addr}')
 
     while True:
         data = conn.recv(BUFFER_SIZE)
         if not data:
             print('No data received.')
+            logging.info('No data received.')
             break
         print(f"received data:{data.decode()}")
+        logging.info(f"received data:{data.decode()}")
         conn.send("pong".encode())
 
     conn.close()
 
-listen_forever()
+
+while True:
+    listen_forever()

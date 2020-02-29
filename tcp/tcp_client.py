@@ -1,4 +1,10 @@
+import logging
 import socket
+
+logging.basicConfig(level=logging.INFO,
+                    filename='tcp_client_out.txt',
+                    filemode='a',
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 TCP_IP = '127.0.0.1'
 TCP_PORT = 5000
@@ -14,12 +20,13 @@ def send(id=0):
     s.send(f"{id}:{MESSAGE}".encode())
     data = s.recv(BUFFER_SIZE)
     s.close()
-    print("received data:", data.decode())
+    print(f"received data:{data.decode()}")
+    logging.info(f"received data:{data.decode()}")
 
 
 def get_client_id():
-    id = input("Enter client id:")
-    return id
+    cid = input("Enter client id:")
+    return int(cid)
 
 
 if __name__ == "__main__":
