@@ -1,5 +1,6 @@
 import logging
 import socket
+import time
 
 logging.basicConfig(level=logging.INFO,
                     filename='tcp_client_out.txt',
@@ -12,21 +13,23 @@ BUFFER_SIZE = 1024
 MESSAGE = "ping"
 
 
-def send(id=0):
+def send(cid='unknown'):
     # Create a TCP/IP socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Connect to server
     s.connect((TCP_IP, TCP_PORT))
-    s.send(f"{id}:{MESSAGE}".encode())
-    data = s.recv(BUFFER_SIZE)
+    for i in range(10):
+        s.send(f"{cid}:{MESSAGE}".encode())
+        data = s.recv(BUFFER_SIZE)
+        print(f"received data:{data.decode()}")
+        logging.info(f"received data:{data.decode()}")
+        time.sleep(1)
     s.close()
-    print(f"received data:{data.decode()}")
-    logging.info(f"received data:{data.decode()}")
 
 
 def get_client_id():
     cid = input("Enter client id:")
-    return int(cid)
+    return cid
 
 
 if __name__ == "__main__":
