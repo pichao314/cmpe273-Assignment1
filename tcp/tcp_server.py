@@ -5,7 +5,7 @@ from _thread import *
 import threading
 
 logging.basicConfig(level=logging.INFO,
-                    filename='tcp_server_out.txt',
+                    filename='server_out.txt',
                     filemode='w',
                     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
@@ -18,6 +18,10 @@ print_lock = threading.Lock()
 
 # thread function
 def threaded(c):
+    data = c.recv(BUFFER_SIZE)
+    print("Connected Client: %s" % data.decode())
+    logging.info("Connected Client: %s" % data.decode())
+    c.send("START".encode())
     while True:
         data = c.recv(BUFFER_SIZE)
         if not data:
@@ -45,7 +49,7 @@ def listen_forever():
 
 
 if __name__ == "__main__":
-    os.remove("tcp_client_out.txt")
-    # os.remove("tcp_server_out.txt")
-    while True:
-        listen_forever()
+    print("Server started at port %d" % TCP_PORT)
+    logging.info("Server started at port %d" % TCP_PORT)
+    # while True:
+    listen_forever()
