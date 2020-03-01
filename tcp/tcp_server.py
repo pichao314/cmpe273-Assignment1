@@ -1,4 +1,5 @@
 import logging
+import os
 import socket
 from _thread import *
 import threading
@@ -40,8 +41,11 @@ def listen_forever():
         logging.info(f'Connection address:{addr}')
         start_new_thread(threaded, (conn,))
 
-    s.close()
+    # s.close()
 
 
-while True:
-    listen_forever()
+if __name__ == "__main__":
+    os.remove("tcp_client_out.txt")
+    # os.remove("tcp_server_out.txt")
+    while True:
+        listen_forever()
