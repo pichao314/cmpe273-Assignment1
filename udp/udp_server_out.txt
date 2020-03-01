@@ -1,0 +1,24 @@
+2020-03-01 01:58:15,506 - udp_server.py[line:24] - INFO: Server started at port 4000
+2020-03-01 01:58:15,506 - udp_server.py[line:26] - INFO: The error id would be [8994, 8947, 8446, 8379, 8337, 8334, 8252, 8141, 8122, 8071, 7899, 6976, 5154, 2725, 2352, 1726, 1631, 1481, 816, 378]
+2020-03-01 01:58:15,506 - udp_server.py[line:28] - INFO: Accepting a file upload...
+2020-03-01 01:58:17,837 - udp_server.py[line:39] - INFO: Error id 378
+2020-03-01 01:58:18,904 - udp_server.py[line:39] - INFO: Error id 816
+2020-03-01 01:58:20,000 - udp_server.py[line:39] - INFO: Error id 1481
+2020-03-01 01:58:21,029 - udp_server.py[line:39] - INFO: Error id 1631
+2020-03-01 01:58:22,049 - udp_server.py[line:39] - INFO: Error id 1726
+2020-03-01 01:58:23,140 - udp_server.py[line:39] - INFO: Error id 2352
+2020-03-01 01:58:24,199 - udp_server.py[line:39] - INFO: Error id 2725
+2020-03-01 01:58:25,475 - udp_server.py[line:39] - INFO: Error id 5154
+2020-03-01 01:58:26,692 - udp_server.py[line:39] - INFO: Error id 6976
+2020-03-01 01:58:27,818 - udp_server.py[line:39] - INFO: Error id 7899
+2020-03-01 01:58:28,848 - udp_server.py[line:39] - INFO: Error id 8071
+2020-03-01 01:58:29,865 - udp_server.py[line:39] - INFO: Error id 8122
+2020-03-01 01:58:30,877 - udp_server.py[line:39] - INFO: Error id 8141
+2020-03-01 01:58:31,899 - udp_server.py[line:39] - INFO: Error id 8252
+2020-03-01 01:58:32,921 - udp_server.py[line:39] - INFO: Error id 8334
+2020-03-01 01:58:33,926 - udp_server.py[line:39] - INFO: Error id 8337
+2020-03-01 01:58:34,941 - udp_server.py[line:39] - INFO: Error id 8379
+2020-03-01 01:58:35,960 - udp_server.py[line:39] - INFO: Error id 8446
+2020-03-01 01:58:37,036 - udp_server.py[line:39] - INFO: Error id 8947
+2020-03-01 01:58:38,049 - udp_server.py[line:39] - INFO: Error id 8994
+2020-03-01 01:58:39,174 - udp_server.py[line:46] - INFO: Upload successfully completed.
