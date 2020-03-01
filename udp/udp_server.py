@@ -9,13 +9,19 @@ MESSAGE = "pong"
 def listen_forever():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind(("", UDP_PORT))
+    print(f"Server started at port {UDP_PORT}")
 
     while True:
         # get the data sent to us
         data, ip = s.recvfrom(BUFFER_SIZE)
-        print("{}: {}".format(ip, data.decode(encoding="utf-8").strip()))
-        # reply back to the client
-        s.sendto(MESSAGE.encode(), ip)
+        while data.decode() != "FIN":
+            # reply back to the client
+            s.sendto(data.decode(encoding="utf-8").strip().split(sep=":")[0].encode(), ip)
+            data, ip = s.recvfrom(BUFFER_SIZE)
+        s.sendto("ACK".encode(), ip)
+        print("Upload successfully completed.")
+        break
 
 
-listen_forever()
+if __name__ == "__main__":
+    listen_forever()

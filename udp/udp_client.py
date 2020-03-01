@@ -6,20 +6,27 @@ BUFFER_SIZE = 1024
 MESSAGE = "ping"
 
 
-def send(id=0):
+def send():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.sendto(f"{id}:{MESSAGE}".encode(), (UDP_IP, UDP_PORT))
+        with open("upload.txt") as f:
+            line = f.readline()
+            while line:
+                pid, data = line.strip().split(sep=":")
+                s.sendto(f"{pid}:{data}".encode(), (UDP_IP, UDP_PORT))
+                data, ip = s.recvfrom(BUFFER_SIZE)
+                print("Received ack %s from the server" % data.decode())
+                line = f.readline()
+        s.sendto("FIN".encode(), (UDP_IP, UDP_PORT))
         data, ip = s.recvfrom(BUFFER_SIZE)
-        print("received data: {}: {}".format(ip, data.decode()))
+        while data.decode() != "ACK":
+            s.sendto("FIN".encode(), (UDP_IP, UDP_PORT))
+            data, ip = s.recvfrom(BUFFER_SIZE)
+        print("File upload successfully completed.")
     except socket.error:
         print("Error! {}".format(socket.error))
         exit()
 
 
-def get_client_id():
-    id = input("Enter client id:")
-    return id
-
-
-send(get_client_id())
+if __name__ == "__main__":
+    send()
