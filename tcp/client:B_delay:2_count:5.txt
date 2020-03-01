@@ -1,0 +1,11 @@
+2020-02-29 21:10:04,801 - tcp_client.py[line:31] - INFO: Sending data ping
+2020-02-29 21:10:04,801 - tcp_client.py[line:34] - INFO: Received data:pong
+2020-02-29 21:10:06,802 - tcp_client.py[line:31] - INFO: Sending data ping
+2020-02-29 21:10:06,802 - tcp_client.py[line:34] - INFO: Received data:pong
+2020-02-29 21:10:08,806 - tcp_client.py[line:31] - INFO: Sending data ping
+2020-02-29 21:10:08,807 - tcp_client.py[line:34] - INFO: Received data:pong
+2020-02-29 21:10:10,808 - tcp_client.py[line:31] - INFO: Sending data ping
+2020-02-29 21:10:10,808 - tcp_client.py[line:34] - INFO: Received data:pong
+2020-02-29 21:10:12,814 - tcp_client.py[line:31] - INFO: Sending data ping
+2020-02-29 21:10:12,814 - tcp_client.py[line:34] - INFO: Received data:pong
+

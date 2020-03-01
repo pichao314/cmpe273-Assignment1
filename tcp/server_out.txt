@@ -1,0 +1,22 @@
+2020-02-29 21:10:03,412 - tcp_server.py[line:53] - INFO: Server started at port 5000
+2020-02-29 21:10:04,203 - tcp_server.py[line:45] - INFO: Connection address:('127.0.0.1', 56491)
+2020-02-29 21:10:04,203 - tcp_server.py[line:23] - INFO: Connected Client: A
+2020-02-29 21:10:04,203 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:04,800 - tcp_server.py[line:45] - INFO: Connection address:('127.0.0.1', 56492)
+2020-02-29 21:10:04,800 - tcp_server.py[line:23] - INFO: Connected Client: B
+2020-02-29 21:10:04,801 - tcp_server.py[line:32] - INFO: received data:B:ping
+2020-02-29 21:10:05,208 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:06,214 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:06,802 - tcp_server.py[line:32] - INFO: received data:B:ping
+2020-02-29 21:10:07,216 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:08,218 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:08,807 - tcp_server.py[line:32] - INFO: received data:B:ping
+2020-02-29 21:10:09,221 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:10,223 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:10,808 - tcp_server.py[line:32] - INFO: received data:B:ping
+2020-02-29 21:10:11,227 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:12,228 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:12,814 - tcp_server.py[line:32] - INFO: received data:B:ping
+2020-02-29 21:10:13,232 - tcp_server.py[line:32] - INFO: received data:A:ping
+2020-02-29 21:10:14,235 - tcp_server.py[line:29] - INFO: Connection closed
+2020-02-29 21:10:14,818 - tcp_server.py[line:29] - INFO: Connection closed
